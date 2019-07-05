@@ -3,4 +3,4 @@ project(Leetcode)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Leetcode MergeBusinessInfo.cpp)
+add_executable(Leetcode findId.cpp)
