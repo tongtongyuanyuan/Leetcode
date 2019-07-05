@@ -3,25 +3,36 @@
 //
 
 //Reduce String aaddc --- adc
+//adadc -- adc
+
+//aaddeeccee >> adece
+
+
+//a  a  d  d  e  e  c  c  e  e
+//ij i  ij i  ij    ij    j    ij
+//l  l  l     l
+
 #include<iostream>
-#include<vector>
 
 using namespace std;
 
 string removeDuplicate(string s) {
-    sort(s.begin(), s.end());
-    string str = " ";
-    int i = 0, j = 0;
-    int n = s.size();
-    while (i <= n && j < n) {
-        if (s[i] == s[j]) {
-            i++;
-        } else {
-            str.push_back(s[j]);
+    if(s.empty()) return "";
+    int n = s.length();
+    int len = 0;
+    int i = 0;
+    int j = 0;
+    while(i <= n && j < n){
+        if(i == n ||  s[j] != s[i]){
+            s[len++] = s[j];
             j = i;
         }
-        return str;
+        else{
+            i++;
+        }
     }
+    return s.substr(0, len);
+
 }
 
 int main() {
