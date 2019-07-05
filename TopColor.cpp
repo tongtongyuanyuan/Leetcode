@@ -25,13 +25,29 @@
 
 using namespace std;
 
-vector<string> TopColor(vector<string>) {
-    unordered_map<string,int> color;
+vector<string> TopColor(vector<vector<string>>& input) {
+    unordered_map<string, int> color;
     vector<string> res;
-    for(int i = 0; i < color.size();i++) {
-        for(int j = 0;j < color[i].size();++j) {}
-        if(m.count())
-            ++m[color[i][j]];
+    int max_count = 0;
+    for(int i = 0; i < input.size();i++) {
+        for (int j = 0; j < input[i].size(); ++j) {
+            max_count = max(max_count, ++color[input[i][j]]);
+        }
     }
-    int max = INT_MAX:
+    for(auto& a : color) {
+        if(a.second == max_count)
+            res.push_back(a.first);
+    }
+   return res;
+}
+
+int main() {
+    vector<vector<string>> input{
+            {"red", "black","green"},
+            {"white","red", "yellow"},
+            {"red","yellow","yellow","yellow"},
+    };
+    vector<string> res = TopColor(input);
+    for(auto& r : res)
+        cout << r << ' ';
 }
