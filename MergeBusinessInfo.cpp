@@ -42,7 +42,6 @@ vector<BusinessInfo> mergeBusinessInfo(vector<BusinessInfo>& list1, vector<Busin
         res[r++] = list2[i2++];
     }
 
-
     return res;
 }
 
