@@ -15,6 +15,7 @@
 
 
 #include <iostream>
+#include <algorithm>
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
@@ -30,11 +31,14 @@ class Solution {
 public:
 
     vector<int> findId(vector<BusinessInfo>& input, string a, string b) {
+        transform(a.begin(), a.end(), a.begin(), ::tolower);
+        transform(b.begin(), b.end(), b.begin(), ::tolower);
         unordered_map<string, vector<int>> m;
         vector<int> res;
         unordered_set<int> longer;
         for (auto &i : input) {
             for (auto &str : i.catagory) {
+                transform(str.begin(), str.end(), str.begin(), ::tolower);
                 if (str == a) m[a].push_back(i.id);
                 if (str == b) m[b].push_back(i.id);
             }
@@ -55,9 +59,9 @@ public:
 
 int main() {
     string a = "japanese";
-    string b = "restaurant";
+    string b = "rEstaurant";
     vector<BusinessInfo> input;
-    input.push_back(BusinessInfo(101,{"japanese","sushi","restaurant"}));
+    input.push_back(BusinessInfo(101,{"japanese","sushi","Restaurant"}));
     input.push_back(BusinessInfo(102, {"japanese","seafood"}));
     input.push_back(BusinessInfo(103, {"japanese","restaurant","ramen"}));
 
