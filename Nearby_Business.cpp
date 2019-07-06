@@ -12,3 +12,4 @@ struct Node{
     unordered_map<string, int> nearby_business;
     Node(string&& name) : name(name){}
 };
+
