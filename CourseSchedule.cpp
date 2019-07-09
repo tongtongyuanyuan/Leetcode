@@ -60,8 +60,8 @@ public:
   }
 };
 int main() {
-//    vector<vector<int>> prerequisites = {{0,1},{1,0}};
-    vector<vector<int>> prerequisites = {{1,0},{2,1},{3,2}};
+      vector<vector<int>> prerequisites = {{0,1},{1,0}};
+//    vector<vector<int>> prerequisites = {{1,0},{2,1},{3,2}};
     Solution s;
-    cout << s.canFinish(4,prerequisites) << " ";
+    cout << s.canFinish(2,prerequisites) << " ";
 }
