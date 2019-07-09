@@ -23,9 +23,10 @@ public:
         int i = 0;
         while(i < s.size()) {
             auto f = s.find("/",i);
+            //cout << s.substr(i, f - i) << ""; 1,2,3只把i到f-i直接的数字输出
             int len = stoi(s.substr(i, f - i));
             res.push_back(s.substr(f + 1, len));
-            i = f + len + 1;
+            i = f + len + 1; //每次i 在"/"之前一位
         }
         return res;
     }
