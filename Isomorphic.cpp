@@ -22,8 +22,10 @@ public:
 };
 
 int main() {
-    string s = "egg";
-    string t = "add";
+//    string s = "egg";
+//    string t = "add";
+     string s = "foo";
+     string t = "bar";
     Solution S;
     cout << S.isIsomorphic(s,t) << "";
 }
