@@ -3,4 +3,4 @@ project(Leetcode)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Leetcode Nearby_Business.cpp)
+add_executable(Leetcode MaxAverageT.cpp)
