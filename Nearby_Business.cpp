@@ -38,20 +38,19 @@ vector<string> findReachableBusiness(Business* startBusiness, int distance) {
     set<Business*> exist{startBusiness}; //标记不能重复访问一个地点
     for(auto &n : startBusiness->nearbyBusiness) {
         dfs(n.first, res, distance, n.second,exist);
-        return res;
     }
+    return res;
 }
 int main() {
-    Business* A;
-    Business* B;
-    Business* C;
-    Business* D;
-    map<Business*,int> nearbyBusiness;
-    nearbyBusiness[B] = 2;
-    nearbyBusiness[C] = 4;
-    nearbyBusiness[D] = 5;
+    Business* A = new Business("A");
+    Business* B = new Business("B");
+    Business* C = new Business("C");
+    Business* D = new Business("D");
+    A->nearbyBusiness[B] = 2;
+    A->nearbyBusiness[C] = 4;
+    B->nearbyBusiness[D] = 5;
     vector<string> res;
-    res = findReachableBusiness(A,2);
+    res = findReachableBusiness(A,7);
     for(string str : res) {
         cout << str << "";
     }
