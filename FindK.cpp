@@ -7,14 +7,14 @@
 using namespace std;
 
 char findK(string& str, int k){
-    int sum = 0;
+    int sum = 0; //sum是一个很巧妙的运用
     int left = 0;
     int right = 0;
     int len = str.length();
 
     while(left < len && right < len){
         while(right < len && isalpha(str[right])) right++;
-        string cur = str.substr(left, right - left);
+        string cur = str.substr(left, right - left); //right此时指向数字
         left = right;
         while(right < len && isdigit(str[right])) right++;
         int count = stoi(str.substr(left, right - left));
