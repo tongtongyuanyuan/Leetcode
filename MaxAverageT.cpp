@@ -8,74 +8,71 @@
 
 using namespace std;
 
+struct Node{
+    int val;
+    vector<Node*> children;
+    Node() = default;
+    explicit Node(int val) : val(val){}
 
-//
-//struct Node{
-//    int val;
-//    vector<Node*> children;
-//    Node() = default;
-//    explicit Node(int val) : val(val){}
-//
-//};
-//
-//
-//pair<int, int> dfs(Node* root, Node*& res, double& cur_max){
-//    if(root == nullptr) return make_pair(0, 0);
-//    if(root->children.empty()) return make_pair(root->val, 1);
-//    int sum = root->val;
-//    int count = 1;
-//    for(auto n : root->children){
-//        pair<int, int> next_child = dfs(n, res, cur_max);
-//        sum += next_child.first;
-//        count += next_child.second;
-//    }
-//
-//    double cur = 1.0 * sum / count;
-//    if(cur > cur_max){
-//        res = root;
-//        cur_max = cur;
-//    }
-//    return make_pair(sum, count);
-//}
-//
-//
-//
-//Node* largestAvgSubtree(Node* root){
-//    Node* res = nullptr;
-//    double cur_max= INT_MIN;
-//    dfs(root, res, cur_max);
-//    return res;
-//
-//}
-//
-//
-//int main(){
-//    Node* n1 = new Node(7);
-//    Node* n2 = new Node(6);
-//    Node* n3 = new Node(2);
-//    Node* n4 = new Node(4);
-//    Node* n5 = new Node(1);
-//    Node* n6 = new Node(5);
-//    Node* n7 = new Node(9);
-//    Node* n8 = new Node(8);
-//    Node* n9 = new Node(3);
-//    Node* n10 = new Node(8);
-//    n1->children.push_back(n2);
-//    n1->children.push_back(n3);
-//    n1->children.push_back(n4);
-//
-//    n2->children.push_back(n5);
-//    n2->children.push_back(n6);
-//
-//    n3->children.push_back(n7);
-//    n3->children.push_back(n8);
-//    n3->children.push_back(n9);
-//
-//    n4->children.push_back(n10);
-//
-//    cout << largestAvgSubtree(n1)->val << endl;
-//
-//}
+};
+
+
+pair<int, int> dfs(Node* root, Node*& res, double& cur_max){
+    if(root == nullptr) return make_pair(0, 0);
+    if(root->children.empty()) return make_pair(root->val, 1);
+    int sum = root->val;
+    int count = 1;
+    for(auto n : root->children){
+        pair<int, int> next_child = dfs(n, res, cur_max);
+        sum += next_child.first;
+        count += next_child.second;
+    }
+
+    double cur = 1.0 * sum / count;
+    if(cur > cur_max){
+        res = root;
+        cur_max = cur;
+    }
+    return make_pair(sum, count);
+}
+
+
+Node* largestAvgSubtree(Node* root){
+    Node* res = nullptr;
+    double cur_max= INT_MIN;
+    dfs(root, res, cur_max);
+    return res;
+
+}
+
+
+int main(){
+    Node* n1 = new Node(7);
+    Node* n2 = new Node(6);
+    Node* n3 = new Node(2);
+    Node* n4 = new Node(4);
+    Node* n5 = new Node(1);
+    Node* n6 = new Node(5);
+    Node* n7 = new Node(9);
+    Node* n8 = new Node(8);
+    Node* n9 = new Node(3);
+    Node* n10 = new Node(8);
+    n1->children.push_back(n2);
+    n1->children.push_back(n3);
+    n1->children.push_back(n4);
+
+    n2->children.push_back(n5);
+    n2->children.push_back(n6);
+
+    n3->children.push_back(n7);
+    n3->children.push_back(n8);
+    n3->children.push_back(n9);
+
+    n4->children.push_back(n10);
+
+    cout << largestAvgSubtree(n1)->val << endl;
+
+}
 
 
 //class TreeNode{
