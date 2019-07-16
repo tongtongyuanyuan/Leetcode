@@ -39,8 +39,9 @@ int findString(string &s,int k) {
 }
 int main() {
 //    string s = "abcdabcabc";
-    string s = "abcbdabc";
-    int k = 3;
+//    string s = "abcbdabc";
+    string s = "aba";
+    int k = 2;
     cout << findString(s,k) << "";
 }
 //没有说at least,刚好k个distinct，并且abc 与bca是一个
