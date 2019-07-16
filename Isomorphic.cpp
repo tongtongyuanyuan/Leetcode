@@ -24,7 +24,7 @@ public:
 int main() {
 //    string s = "egg";
 //    string t = "add";
-     string s = "foo";
+     string s = "for";// foo就是false
      string t = "bar";
     Solution S;
     cout << S.isIsomorphic(s,t) << "";
