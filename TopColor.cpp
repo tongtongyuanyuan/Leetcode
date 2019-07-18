@@ -38,7 +38,7 @@ vector<string> TopColor(vector<vector<string>>& input) {
         if(a.second == max_count)
             res.push_back(a.first);
     }
-   return res;
+    return res;
 }
 
 int main() {
