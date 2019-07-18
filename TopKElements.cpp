@@ -54,8 +54,8 @@ public:
 };
 
 int main() {
-    //vector<int> nums = {1,1,1,2,3,3};
-    vector<int> nums = {2,2,1,3,3,3};
+    vector<int> nums = {1,1,1,2,3,3}; //31
+    //vector<int> nums = {2,2,1,3,3,3};//23
     Solution S;
     vector<int> res;
     //res = S.topKElements(nums,2);
