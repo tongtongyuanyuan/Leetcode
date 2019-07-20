@@ -27,7 +27,7 @@ public:
 };
 //struct cmp{
 //    bool operator() (pair<int,int> &n1, pair<int,int> &n2) {
-//        return n1.second > n2.second;
+//        return n1.second > n2.second;  //大于比较器，只比较second，此题是value
 //    }
 //};
 //建立小顶堆
@@ -42,7 +42,7 @@ public:
 //        for(auto c : counts) {
 //            freq.push(c);
 //            if(freq.size() > k)
-//                freq.pop();  //一直维持k个,priority_queue先按first，key数字排序，再按个数
+//                freq.pop();
 //        }
 //        vector<int> res;
 //        while(!freq.empty()) {

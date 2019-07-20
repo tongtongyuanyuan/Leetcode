@@ -18,8 +18,8 @@ char findK(string& str, int k){
         left = right;
         while(right < len && isdigit(str[right])) right++;
         int count = stoi(str.substr(left, right - left));
-        if(cur.length() * count + sum - 1 >= k){
-            int index = (k - sum) % cur.length();
+        if(cur.length() * count + sum - 1 >= k){  //k + 1当前长度
+            int index = (k + 1 - sum) % cur.length() - 1; // k - sum
             return cur[index];
         }
         else{
@@ -34,3 +34,4 @@ int main() {
      int k = 34;
      cout <<findK(str,k) << "";
 }
+//880. leet2code3-> leetleet->leetleetcode->leetleetcodeleetleetcodeleetleetcodea
