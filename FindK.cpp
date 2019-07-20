@@ -34,4 +34,5 @@ int main() {
      int k = 34;
      cout <<findK(str,k) << "";
 }
-//880. leet2code3-> leetleet->leetleetcode->leetleetcodeleetleetcodeleetleetcodea
+//880. leet2code3-> leetleet->leetleetcode->leetleetcodeleetleetcodeleetleetcode
+//      haha22->hahahaha
