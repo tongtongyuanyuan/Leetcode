@@ -35,11 +35,33 @@ using namespace std;
 //        }
 //        return res;
 //    }
+    vector<int> findTwoNumber(vector<int>& nums1, vector<int>& nums2, int k) {
+    int max_res = INT_MIN;
+    int n1 = nums1.size(), n2 = nums2.size();
+    vector<int> res(2, -1);
+    int i = 0, j = n2 - 1;
+    while (i < n1 && n2 >= 0) {
+        if (nums1[i] + nums2[j] <= k) {
+            if (nums1[i] + nums2[j] == k) {
+                return {i, j};
+            }
+            if (nums1[i] + nums2[j] > max_res) {
+                max_res = nums1[i] + nums2[j];
+                res[0] = i;
+                res[1] = j;
+            }
+            ++i;
+        } else{
+            j--; //注意要是--j就 code11
+        }
+    }
+          return res;
+}
 int main() {
     vector<int> A = {1,4,6,8};
     vector<int> B = {1,2,3,4};
     int k = 9;
-    vector<int> res = maxIndex(A, B, k);
+    vector<int> res = findTwoNumber(A, B, k);
     for(auto r : res) {
         cout << r << " ";
     }
