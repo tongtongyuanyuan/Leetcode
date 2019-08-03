@@ -42,16 +42,16 @@ public:
 };
 
 int main() {
-//     vector<string> source = {
-//             "/*Test program */", "int main()", "{ ",
-//             "// variable declaration ", "int a, b, c;", "/* This is a test",
-//             "   multiline  ", "   comment for ", "   testing */", "a = b + c;", "}"
-//     };
-    vector<string> source = {"a/*comment", "line", "more_comment*/b"};
+     vector<string> source = {
+             "/*Test program */", "int main()", "{ ",
+             "// variable declaration ", "int a, b, c;", "/* This is a test",
+             "   multiline  ", "   comment for ", "   testing */", "a = b + c;", "}"
+     };
+//    vector<string> source = {"a/*comment", "line", "more_comment*/b"};
     vector<string> res;
     Solution S;
     res = S.removeComments(source);
     for(string& r : res) {
-        cout << r << "";
+        cout << r << " ";
     }
 }
