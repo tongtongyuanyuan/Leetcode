@@ -4,4 +4,4 @@ project(Leetcode)
 set(CMAKE_CXX_STANDARD 14)
 
 
-add_executable(microsoft Remove_Comments.cpp.cpp)
+add_executable(microsoft Remove_Comments.cpp)
