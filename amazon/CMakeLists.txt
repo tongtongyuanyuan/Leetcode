@@ -4,4 +4,4 @@ project(Leetcode)
 set(CMAKE_CXX_STANDARD 14)
 
 
-add_executable(amazon intervalIntersection.cpp)
+add_executable(amazon VerticalTraversal.cpp)

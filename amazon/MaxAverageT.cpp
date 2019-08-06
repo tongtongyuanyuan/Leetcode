@@ -65,11 +65,6 @@ int main(){
     n2->children.push_back(n6);
 
     n3->children.push_back(n7);
-    n3->children.push_back(n8);
-    n3->children.push_back(n9);
-
-    n4->children.push_back(n10);
-
     cout << largestAvgSubtree(n1)->val << endl;
 
 }
@@ -118,7 +113,7 @@ int main(){
 //        return res;
 //    }
 //}
-
+//
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -193,6 +188,4 @@ int main() {
     n3->left = n6;
     n3->right = n7;
     cout << maximumAverageSum(n1)->val << endl;
-
-
 }
