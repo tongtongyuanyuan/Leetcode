@@ -4,4 +4,4 @@ project(Leetcode)
 set(CMAKE_CXX_STANDARD 14)
 
 
-add_executable(amazon Pascal's_Triangle2.cpp)
+add_executable(amazon intervalIntersection.cpp)
