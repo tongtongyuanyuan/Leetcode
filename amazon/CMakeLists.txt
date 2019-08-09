@@ -4,4 +4,4 @@ project(Leetcode)
 set(CMAKE_CXX_STANDARD 14)
 
 
-add_executable(amazon Kth_largest.cpp)
+add_executable(amazon Minesweeper.cpp)
