@@ -4,4 +4,4 @@ project(Leetcode)
 set(CMAKE_CXX_STANDARD 14)
 
 
-add_executable(amazon Regions.cpp)
+add_executable(amazon Next_permutation.cpp)

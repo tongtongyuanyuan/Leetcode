@@ -10,7 +10,7 @@ class Solution {
 public:
     vector<int> topKElements(vector<int> nums,int k) {
       unordered_map<int,int> m;
-      priority_queue<pair<int,int>> q;
+      priority_queue<pair<int,int>> q;//默认是大顶堆，越往下越小(less)
       vector<int> res;
         for(int i = 0; i < nums.size(); i++) {
             ++m[nums[i]];
