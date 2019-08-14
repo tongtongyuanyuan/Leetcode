@@ -4,4 +4,4 @@ project(Leetcode)
 set(CMAKE_CXX_STANDARD 14)
 
 
-add_executable(amazon Next_permutation.cpp)
+add_executable(amzon Next_permutation.cpp)

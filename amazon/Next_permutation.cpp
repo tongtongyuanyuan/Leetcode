@@ -31,7 +31,8 @@ class Solution {
         }
     };
 int main(){
-    vector<int> num = {1,2,7,4,3,1};
+    //vector<int> num = {1,2,7,4,3,1};
+    vector<int> num = {1,1,2,3,4,7};
     Solution S;
     S.nextPermutation(num);
     S.print(num);
