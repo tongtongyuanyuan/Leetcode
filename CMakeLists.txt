@@ -7,4 +7,4 @@ add_subdirectory(yelp)
 add_subdirectory(amazon)
 add_subdirectory(microsoft)
 
-add_executable(Leetcode FindK.cpp)
+add_executable(Leetcode GCD.cpp)
