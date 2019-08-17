@@ -4,4 +4,4 @@ project(Leetcode)
 set(CMAKE_CXX_STANDARD 14)
 
 
-add_executable(google gcd_strings.cpp)
+add_executable(google Temperatures.cpp)
