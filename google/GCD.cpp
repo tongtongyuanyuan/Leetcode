@@ -19,3 +19,4 @@ int main(){
     int b = 1025;
     cout << gcd(a, b) << "";
 }
+//1071. Greatest Common Divisor of Strings
