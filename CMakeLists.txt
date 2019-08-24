@@ -8,4 +8,4 @@ add_subdirectory(amazon)
 add_subdirectory(microsoft)
 add_subdirectory(google)
 
-add_executable(Leetcode Kclosest.cpp)
+add_executable(Leetcode 707Design_linkedlist.cpp)

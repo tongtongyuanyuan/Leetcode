@@ -4,4 +4,4 @@ project(Leetcode)
 set(CMAKE_CXX_STANDARD 14)
 
 
-add_executable(yelp findId.cpp)
+add_executable(yelp BasicCalculator.cpp)

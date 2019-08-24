@@ -33,12 +33,13 @@ public:
                 res += st.top(); st.pop();
             }
         }
-        res += sign * num; //如果碰到），则num = 0;
+        res += sign * num; //如果碰到 ），则num = 0;
         return res;
     }
 }; //2-(5-6)
 int main() {
-    string s = "2-(5-6)";
+    //string s = "2-(5-6)";
+    string s = "(1+(4+5+2)-3)+(6+8)";
     Solution S;
     cout << S.calculate(s) << "";
 }
