@@ -13,7 +13,6 @@ struct Node{
     vector<Node*> children;
     Node() = default;
     explicit Node(int val) : val(val){}
-
 };
 
 

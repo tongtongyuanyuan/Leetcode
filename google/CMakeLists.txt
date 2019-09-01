@@ -4,4 +4,4 @@ project(Leetcode)
 set(CMAKE_CXX_STANDARD 14)
 
 
-add_executable(google Temperatures.cpp)
+add_executable(google Reduant_Connections.cpp)
