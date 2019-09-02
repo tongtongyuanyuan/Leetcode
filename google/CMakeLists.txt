@@ -4,4 +4,4 @@ project(Leetcode)
 set(CMAKE_CXX_STANDARD 14)
 
 
-add_executable(google Reduant_Connections.cpp)
+add_executable(google MinimumHeight.cpp)
